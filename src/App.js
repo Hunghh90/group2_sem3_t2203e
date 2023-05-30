@@ -1,6 +1,13 @@
 import { FileOutlined, PieChartOutlined, UserOutlined, DesktopOutlined, TeamOutlined } from '@ant-design/icons';
-import { Layout, Menu, theme, Button } from 'antd';
+import {
+  Layout,
+  Menu,
+  theme,
+  Button,
+  Modal
+} from 'antd';
 import { useState } from 'react';
+import Login from './component/Login';
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -27,6 +34,16 @@ const App = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <Layout
       style={{
@@ -45,9 +62,17 @@ const App = () => {
           }}
         >
           <div>
-            <Button type="primary" shape="round" size={size} style={{ float: 'right', margin: '10px 20px', color: 'red' }}>
+            <Button
+              type="primary" shape="round"
+              size={size}
+              style={{ float: 'right', margin: '10px 20px', color: 'red' }}
+              onClick={showModal}
+            >
               Login
             </Button>
+            <Modal title="Login" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+              <Login />
+            </Modal>
           </div>
         </Header>
         <Content
