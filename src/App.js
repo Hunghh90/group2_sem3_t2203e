@@ -1,13 +1,20 @@
-import { FileOutlined, PieChartOutlined, UserOutlined, DesktopOutlined, TeamOutlined } from '@ant-design/icons';
+import {
+  FileOutlined,
+  PieChartOutlined,
+  UserOutlined,
+  DesktopOutlined,
+  TeamOutlined,
+} from '@ant-design/icons';
 import {
   Layout,
   Menu,
   theme,
-  Button,
-  Modal
 } from 'antd';
 import { useState } from 'react';
-import Login from './component/Login';
+import AvatarComponent from './component/Avatar.component'
+import SearchComponent from './component/Search.component';
+import UserNameComponent from './component/UserName.component';
+import LoginButtonComponent from './component/LoginButton.component';
 const { Header, Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
@@ -18,8 +25,8 @@ function getItem(label, key, icon, children) {
   };
 }
 const items = [
-  getItem('Khoan Thu', '1', <PieChartOutlined />),
-  getItem('Khoan Chi', '2', <DesktopOutlined />),
+  getItem('Doanh Thu', '1', <PieChartOutlined />),
+  getItem('Chi Phí', '2', <DesktopOutlined />),
   getItem('User', 'sub1', <UserOutlined />, [
     getItem('Tom', '3'),
     getItem('Bill', '4'),
@@ -29,21 +36,10 @@ const items = [
   getItem('Files', '9', <FileOutlined />),
 ];
 const App = () => {
-  const [size, setSize] = useState('large');
   const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer },
   } = theme.useToken();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
   return (
     <Layout
       style={{
@@ -52,6 +48,10 @@ const App = () => {
     >
       <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
         <div className="demo-logo-vertical" />
+        <div>
+          <AvatarComponent />
+          <UserNameComponent />
+        </div>
         <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
       </Sider>
       <Layout>
@@ -61,26 +61,14 @@ const App = () => {
             background: colorBgContainer,
           }}
         >
-          <div>
-            <Button
-              type="primary" shape="round"
-              size={size}
-              style={{ float: 'right', margin: '10px 20px', color: 'red' }}
-              onClick={showModal}
-            >
-              Login
-            </Button>
-            <Modal title="Login" open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-              <Login />
-            </Modal>
-          </div>
+          <SearchComponent />
+          <LoginButtonComponent />
         </Header>
         <Content
           style={{
             margin: '16px 16px',
           }}
         >
-
           <div
             style={{
               padding: 24,
