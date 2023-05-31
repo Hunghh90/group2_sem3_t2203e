@@ -26,8 +26,8 @@ const App = () => {
       }}
     >
       <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-        <div className="demo-logo-vertical" />       
-          <AvatarComponent />
+        <div className="demo-logo-vertical" />
+        <AvatarComponent />
         <div>
           <UserNameComponent />
         </div>
@@ -37,10 +37,20 @@ const App = () => {
         <Header
           style={{
             padding: 0,
-            background: colorBgContainer,
+            backgroundColor: "#00EE00",
+            display: "block"
           }}
         >
-
+          <div style={{
+            width: "30vw",
+            color: "blueviolet",
+            float: "left",
+            textAlign: "center",
+            fontSize: "50px",
+            fontWeight: "500px",
+            // marginLeft: "100px"
+          }}>Group2 T2203E</div>         
+          
           <LoginButtonComponent />
           <SearchComponent />
         </Header>
@@ -56,9 +66,14 @@ const App = () => {
               background: colorBgContainer,
             }}
           >
+
+
             <Routes>
               <Route path='/listfinancein' element={<ListFinanceIn />} />
             </Routes>
+
+
+
           </div>
         </Content>
         <Footer

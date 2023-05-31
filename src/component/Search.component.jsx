@@ -4,16 +4,16 @@ const { Search } = Input;
 
 const SearchComponent = () => {
     return (
-        <div>
+        <div style={{
+            width: "20vw",
+            float: "right",
+            margin: '15px',
+        }}>
             <Search
                 placeholder="search"
                 onSearch={value => console.log(value)}
                 enterButton
-                style={{
-                    width: "300px",
-                    float: "right",
-                    margin: '15px',
-                }} />
+                 />
         </div>
     )
 }
