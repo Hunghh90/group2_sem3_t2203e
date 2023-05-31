@@ -1,40 +1,19 @@
-import {
-  FileOutlined,
-  PieChartOutlined,
-  UserOutlined,
-  DesktopOutlined,
-  TeamOutlined,
-} from '@ant-design/icons';
+
 import {
   Layout,
   Menu,
   theme,
+  Avatar
 } from 'antd';
 import { useState } from 'react';
 import AvatarComponent from './component/Avatar.component'
 import SearchComponent from './component/Search.component';
 import UserNameComponent from './component/UserName.component';
 import LoginButtonComponent from './component/LoginButton.component';
+import ListFinanceIn from './pages/FinanceIn';
+import { Route, Routes } from 'react-router-dom';
+import MenuComponent from './component/Menu.component';
 const { Header, Content, Footer, Sider } = Layout;
-function getItem(label, key, icon, children) {
-  return {
-    key,
-    icon,
-    children,
-    label,
-  };
-}
-const items = [
-  getItem('Doanh Thu', '1', <PieChartOutlined />),
-  getItem('Chi Phí', '2', <DesktopOutlined />),
-  getItem('User', 'sub1', <UserOutlined />, [
-    getItem('Tom', '3'),
-    getItem('Bill', '4'),
-    getItem('Alex', '5'),
-  ]),
-  getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-  getItem('Files', '9', <FileOutlined />),
-];
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
   const {
@@ -47,12 +26,12 @@ const App = () => {
       }}
     >
       <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)}>
-        <div className="demo-logo-vertical" />
-        <div>
+        <div className="demo-logo-vertical" />       
           <AvatarComponent />
+        <div>
           <UserNameComponent />
         </div>
-        <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
+        <MenuComponent />
       </Sider>
       <Layout>
         <Header
@@ -61,8 +40,9 @@ const App = () => {
             background: colorBgContainer,
           }}
         >
-          <SearchComponent />
+
           <LoginButtonComponent />
+          <SearchComponent />
         </Header>
         <Content
           style={{
@@ -76,7 +56,9 @@ const App = () => {
               background: colorBgContainer,
             }}
           >
-            Bill is a cat.
+            <Routes>
+              <Route path='/listfinancein' element={<ListFinanceIn />} />
+            </Routes>
           </div>
         </Content>
         <Footer

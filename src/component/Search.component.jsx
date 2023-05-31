@@ -10,11 +10,9 @@ const SearchComponent = () => {
                 onSearch={value => console.log(value)}
                 enterButton
                 style={{
-                    width: "500px",
-                    float: "left",
+                    width: "300px",
+                    float: "right",
                     margin: '15px',
-                    marginLeft: '350px',
-                    alignItems: "center"
                 }} />
         </div>
     )
