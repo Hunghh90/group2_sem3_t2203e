@@ -10,9 +10,10 @@ import AvatarComponent from './component/Avatar.component'
 import SearchComponent from './component/Search.component';
 import UserNameComponent from './component/UserName.component';
 import LoginButtonComponent from './component/LoginButton.component';
-import ListFinanceIn from './pages/FinanceIn';
-import { Route, Routes } from 'react-router-dom';
+import ListFinanceIn from './pages/financeIn/FinanceIn.page';
+import { NavLink, Route, Routes } from 'react-router-dom';
 import MenuComponent from './component/Menu.component';
+import CreateFinanceIn from './pages/financeIn/CreateFinanceIn.page';
 const { Header, Content, Footer, Sider } = Layout;
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -37,20 +38,20 @@ const App = () => {
         <Header
           style={{
             padding: 0,
-            backgroundColor: "#00EE00",
+            backgroundColor: "#F5FFFA",
             display: "block"
           }}
         >
-          <div style={{
+          <div><NavLink to="/" style={{
             width: "30vw",
-            color: "blueviolet",
+            color: "#BFEFFF",
             float: "left",
             textAlign: "center",
             fontSize: "50px",
             fontWeight: "500px",
             // marginLeft: "100px"
-          }}>Group2 T2203E</div>         
-          
+          }}>Group2 T2203E</NavLink></div>
+
           <LoginButtonComponent />
           <SearchComponent />
         </Header>
@@ -70,6 +71,7 @@ const App = () => {
 
             <Routes>
               <Route path='/listfinancein' element={<ListFinanceIn />} />
+              <Route path='/createfinancein' element={<CreateFinanceIn />} />
             </Routes>
 
 

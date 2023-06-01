@@ -17,9 +17,12 @@ function getItem(label, key, icon, children) {
     };
 }
 const items = [
-    getItem(<NavLink to="/listfinancein">Doanh Thu</NavLink>, '1', <PieChartOutlined />),
+    getItem("Doanh Thu", 'sub1', <PieChartOutlined />, [
+        getItem(<NavLink to="/listfinancein">Danh sách</NavLink>, "1"),
+        getItem(<NavLink to="/createfinancein">Thêm mới</NavLink>, "2")
+    ]),
     getItem('Option 2', '2', <DesktopOutlined />),
-    getItem('User', 'sub1', <UserOutlined />, [
+    getItem('User', 'sub2', <UserOutlined />, [
         getItem('Tom', '3'),
         getItem('Bill', '4'),
         getItem('Alex', '5'),
@@ -32,7 +35,7 @@ const MenuComponent = () => {
 
     return (
         <>
-            <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" items={items} />
+            <Menu theme="dark" mode="inline" items={items} />
         </>
     );
 };
