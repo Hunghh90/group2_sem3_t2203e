@@ -2,19 +2,14 @@ import { PlusOutlined } from '@ant-design/icons';
 import {
   Button,
   Cascader,
-  Checkbox,
   DatePicker,
   Form,
   Input,
   InputNumber,
-  Radio,
   Select,
-  Switch,
   TreeSelect,
   Upload,
 } from 'antd';
-import { useState } from 'react';
-const { RangePicker } = DatePicker;
 const { TextArea } = Input;
 const normFile = (e) => {
   if (Array.isArray(e)) {
@@ -23,11 +18,9 @@ const normFile = (e) => {
   return e?.fileList;
 };
 const CreateFinanceIn = () => {
-
   return (
     <div>
-
-      <Form
+      <Form className='form-input'
         labelCol={{
           span: 4,
         }}
@@ -36,11 +29,7 @@ const CreateFinanceIn = () => {
         }}
         layout="horizontal"
 
-        style={{
-          maxWidth: 600,
-        }}
       >
-
         <Form.Item label="Họ và tên">
           <Input />
         </Form.Item>
@@ -102,15 +91,14 @@ const CreateFinanceIn = () => {
                   marginTop: 8,
                 }}
               >
-                Upload
+                  Upload
               </div>
-            </div>
-          </Upload>
-        </Form.Item>
+          </div>
+        </Upload>
+      </Form.Item>
+      <Button type='primary' style={{ marginLeft: "250px" }}>Button</Button>
 
-        <Button type='primary' style={{ marginLeft: "250px" }}>Button</Button>
-
-      </Form>
+    </Form>
     </div>
   );
 };

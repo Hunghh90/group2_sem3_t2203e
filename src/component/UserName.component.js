@@ -1,9 +1,9 @@
 const UserNameComponent = () => {
     return (
-        <h3 style={{
-            color: "white",
-            textAlign: "center"
-          }}>Test</h3>
+        <div className="user-name">
+            <h3>Test</h3>
+        </div>
+        
     )
 }
 export default UserNameComponent;

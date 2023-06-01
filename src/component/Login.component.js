@@ -6,7 +6,7 @@ const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
 };
 const LoginComponent = () => (
-    <Form
+    <Form className="form-input"
         name="basic"
         labelCol={{
             span: 8,
@@ -14,9 +14,7 @@ const LoginComponent = () => (
         wrapperCol={{
             span: 16,
         }}
-        style={{
-            maxWidth: 600,
-        }}
+        
         initialValues={{
             remember: true,
         }}
