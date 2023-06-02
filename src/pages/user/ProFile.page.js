@@ -1,3 +1,4 @@
+import { Button } from "antd";
 import AvatarComponent from "../../component/Avatar.component";
 
 const ProFile = () => {
@@ -20,6 +21,7 @@ const ProFile = () => {
                 <p className="label"><b>Địa chỉ</b> : 5721</p>
                 
             </div>
+            <Button className="profile-button" type="primary">Đổi mật khẩu</Button>
         </div>
     )
 }
