@@ -1,0 +1,104 @@
+
+.layout {
+    min-height: 100vh;
+}
+.layout-header {
+   
+    .header {
+        padding: 0;
+        background-color: #F5FFFA;
+        display: block;
+        .login {
+            .login-button {
+                float: right; 
+                margin: 10px 20px;
+                color: rgb(245, 45, 10);
+            }
+            .login-modal {
+              text-align: center;
+                   
+            }
+        }
+    }
+}
+.profile {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #E0EEEE;
+    .profile-content{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    
+       .label {
+        text-align: left;
+        margin: 10px 100px;
+        width: 300px;
+       }
+    }
+    .profile-button {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+   
+}
+.avatar {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+   
+    .avatar-custom{
+        background-color: white;
+        color: green;
+    }
+}
+.form-input {
+    max-width: 600px;
+}
+.user-name {
+    color: white;
+    text-align: center;
+}
+.search-input {
+    width: 20vw;
+    float: right;
+    margin: 15px;
+}
+.list-finance {
+    text-align: center;
+    justify-items: center;
+    font-size: 40px;
+    font-weight: 800px;
+    margin: 15px;
+    
+}
+.list-button {
+    float: right;
+    margin: 15px;
+}
+.modal {
+    text-align: center;
+}
+.content {
+    margin: 16px 16px;
+    .content-content {
+        padding: 24;
+        min-height: 360;
+        background: colorBgContainer;
+    }
+}
+.footer {
+    text-align: center;
+}
+
+.logo {
+    .logo-nav-link {
+        width: 30vw;
+        color: #BFEFFF;
+        float: left;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500px;
+    }
+}

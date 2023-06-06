@@ -1,4 +1,11 @@
-import { Space, Table, Tag } from 'antd';
+import {
+  Space,
+  Table,
+  Tag,
+  Button,
+} from 'antd';
+import { PlusOutlined } from '@ant-design/icons';
+import { NavLink } from 'react-router-dom';
 const columns = [
   {
     title: 'Name',
@@ -70,5 +77,22 @@ const data = [
     tags: ['cool', 'teacher'],
   },
 ];
-const ListFinanceIn = () => <Table columns={columns} dataSource={data} />;
+const ListFinanceIn = () => {
+  return (
+    <>
+      <div className='list-finance'>
+        Danh sách doanh thu
+      </div>
+      <div>
+        <Button type='primary' className='list-button'>
+          <PlusOutlined />
+          <NavLink to="/createfinancein">
+            New
+          </NavLink>
+        </Button>
+      </div>
+      <Table columns={columns} dataSource={data} />
+    </>
+  )
+};
 export default ListFinanceIn;
