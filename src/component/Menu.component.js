@@ -21,7 +21,7 @@ const items = [
         getItem(<NavLink to="/listfinancein">Danh sách</NavLink>, "1"),
         getItem(<NavLink to="/createfinancein">Thêm mới</NavLink>, "2")
     ]),
-    getItem('Option 2', '2', <DesktopOutlined />),
+    getItem('Option 2', '3', <DesktopOutlined />),
     getItem('User', 'sub2', <UserOutlined />, [
         getItem('Tom', '3'),
         getItem('Bill', '4'),

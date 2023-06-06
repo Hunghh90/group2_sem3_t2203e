@@ -14,6 +14,8 @@ import ListFinanceIn from './pages/financeIn/FinanceIn.page';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import MenuComponent from './component/Menu.component';
 import CreateFinanceIn from './pages/financeIn/CreateFinanceIn.page';
+import DashboardComponent from './component/Dashboard.component';
+
 const { Header, Content, Footer, Sider } = Layout;
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -60,6 +62,9 @@ const App = () => {
             margin: '16px 16px',
           }}
         >
+      
+            <DashboardComponent/>
+    
           <div
             style={{
               padding: 24,
@@ -67,16 +72,13 @@ const App = () => {
               background: colorBgContainer,
             }}
           >
-
-
             <Routes>
               <Route path='/listfinancein' element={<ListFinanceIn />} />
               <Route path='/createfinancein' element={<CreateFinanceIn />} />
             </Routes>
-
-
-
           </div>
+         
+
         </Content>
         <Footer
           style={{
