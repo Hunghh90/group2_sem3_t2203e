@@ -11,11 +11,6 @@ import SearchComponent from './component/Search.component';
 import UserNameComponent from './component/UserName.component';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import MenuComponent from './component/Menu.component';
-<<<<<<< HEAD
-import CreateFinanceIn from './pages/financeIn/CreateFinanceIn.page';
-import DashboardComponent from './component/Dashboard.component';
-
-=======
 import ListFinanceIn from './pages/financein/FinanceIn.page';
 import CreateFinanceIn from './pages/financein/CreateFinanceIn.page';
 import ListFinanceOut from './pages/financeout/FinanceOut.page';
@@ -24,7 +19,6 @@ import ProFile from './pages/user/ProFile.page';
 import { LoginOutlined } from '@ant-design/icons';
 import LoginComponent from './component/Login.component';
 import './css/customcss.scss'
->>>>>>> c33d43ada47d779cb19a3922f654ca3cc0cfd598
 const { Header, Content, Footer, Sider } = Layout;
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -84,26 +78,8 @@ const App = () => {
           </div>
           <SearchComponent />
         </Header>
-<<<<<<< HEAD
-        <Content
-          style={{
-            margin: '16px 16px',
-          }}
-        >
-      
-            <DashboardComponent/>
-    
-          <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-              background: colorBgContainer,
-            }}
-          >
-=======
         <Content className='content'>
           <div className='content-content'>
->>>>>>> c33d43ada47d779cb19a3922f654ca3cc0cfd598
             <Routes>
               <Route path='/listfinancein' element={<ListFinanceIn />} />
               <Route path='/createfinancein' element={<CreateFinanceIn />} />
