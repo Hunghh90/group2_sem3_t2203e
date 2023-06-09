@@ -2,13 +2,11 @@ import { Button, Checkbox, Form, Input } from 'antd';
 
 const LoginComponent = () => {
     const onFinish = (values) => {
-        console.log('Success:', values);
-        console.log(values.remember)
-        if(!values.remember) {     
-            form.setFieldsValue({username:"",password:""});
+        if (!values.remember) {
+            form.setFieldsValue({ username: "", password: "" });
             return;
         }
-        
+
     };
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
