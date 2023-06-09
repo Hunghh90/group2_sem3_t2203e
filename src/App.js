@@ -37,13 +37,15 @@ const App = () => {
 
           <AvatarComponent />
         </div>
-        <div><Modal className='modal'
-          title="Thông tin cá nhân"
-          open={isModalAvartar}
-          onOk={() => setIsModalAvartar(false)}
-          onCancel={() => setIsModalAvartar(false)}>
-          <ProFile />
-        </Modal></div>
+        <div>
+          <Modal className='modal'
+            title="Thông tin cá nhân"
+            open={isModalAvartar}
+            onOk={() => setIsModalAvartar(false)}
+            onCancel={() => setIsModalAvartar(false)}>
+            <ProFile />
+          </Modal>
+        </div>
         <div>
           <UserNameComponent />
         </div>
