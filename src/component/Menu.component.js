@@ -25,6 +25,7 @@ const items = [
         getItem(<NavLink to="/listfinanceout">Danh sách</NavLink>, "3"),
         getItem(<NavLink to="/createfinanceout">Thêm mới</NavLink>, "4")
     ]),
+    getItem(<NavLink to="/onleave">Nghỉ phép</NavLink>, "5")
 ];
 const MenuComponent = () => {
 

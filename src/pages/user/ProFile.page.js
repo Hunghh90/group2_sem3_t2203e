@@ -37,7 +37,7 @@ const ProFile = (props) => {
                     onCancel={() => setIsModalChangerPassword(false)}
                     footer={false}
                 >
-                    <ChangerPassword setIsModalChangerPassword={setIsModalChangerPassword}/>
+                    <ChangerPassword setIsModalChangerPassword={setIsModalChangerPassword} />
                 </Modal>
             </div>
         </div>

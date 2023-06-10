@@ -2,6 +2,7 @@
 import { Button, Form, Input } from 'antd';
 import { useForm } from 'antd/es/form/Form';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 
 
@@ -11,15 +12,14 @@ const ChangerPassword = (props) => {
     const [form] = Form.useForm();
     const onFinish = async (values) => {
         if(values.password !== values.confirmpassword) {
-            alert("mat khau xac minh chua dung");
-            console.log("mat khau xac minh chua dung");
+            toast.warning("Mật khẩu xác minh chưa đúng");
             return;
         } 
             console.log(values);
           form.resetFields();
     };
     const onFinishFailed = (errorInfo) => {
-        alert("Vui lòng điền đầy đủ thông tin");
+        toast.error("Vui lòng điền đầy đủ thông tin");
         console.log(errorInfo);
     };
     return (
@@ -44,7 +44,7 @@ const ChangerPassword = (props) => {
                 autoComplete="off"
             >
                 <Form.Item
-                    label="Old Password"
+                    label="Mật khẩu cũ"
                     name="oldpassword"
                     rules={[
                         {
@@ -57,7 +57,7 @@ const ChangerPassword = (props) => {
                 </Form.Item>
 
                 <Form.Item
-                    label="Password"
+                    label="Mật khẩu mới"
                     name="password"
                     rules={[
                         {
@@ -69,7 +69,7 @@ const ChangerPassword = (props) => {
                     <Input.Password />
                 </Form.Item>
                 <Form.Item
-                    label="Confirm Password"
+                    label="Mật khẩu xác minh"
                     name="confirmpassword"
                     rules={[
                         {
