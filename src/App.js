@@ -11,17 +11,17 @@ import SearchComponent from './component/Search.component';
 import UserNameComponent from './component/UserName.component';
 import { NavLink, Route, Routes } from 'react-router-dom';
 import MenuComponent from './component/Menu.component';
-import ListFinanceIn from './pages/financein/FinanceIn.page';
-import CreateFinanceIn from './pages/financein/CreateFinanceIn.page';
+import ListFinanceIn from './pages/financeIn/FinanceIn.page';
+import CreateFinanceIn from './pages/financeIn/CreateFinanceIn.page';
 import ListFinanceOut from './pages/financeout/FinanceOut.page';
 import CreateFinanceOut from './pages/financeout/CreateFinanceOut.page';
 import ProFile from './pages/user/ProFile.page';
 import { LoginOutlined } from '@ant-design/icons';
 import LoginComponent from './component/Login.component';
 import { ToastContainer } from 'react-toastify';
-import './css/customcss.scss'
+import './css/customcss.scss';
 import 'react-toastify/dist/ReactToastify.css';
-import OnLeave from './pages/user/Onleave.page';
+
 const { Header, Content, Footer, Sider } = Layout;
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -88,7 +88,7 @@ const App = () => {
               <Route path='/createfinancein' element={<CreateFinanceIn />} />
               <Route path='/listfinanceout' element={<ListFinanceOut />} />
               <Route path='/createfinanceout' element={<CreateFinanceOut />} />
-              <Route path='/onleave' element={<OnLeave />} />
+              
             </Routes>
           </div>
 
