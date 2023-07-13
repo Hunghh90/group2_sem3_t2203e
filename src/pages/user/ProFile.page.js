@@ -20,7 +20,7 @@ const ProFile = (props) => {
                 <p className="label"><b>Chức vụ</b> : 5721</p>
                 <p className="label"><b>Email</b> : 5721</p>
                 <p className="label"><b>Tel</b> : 5721</p>
-                <p className="label"><b>Ngày vào</b> : 5721</p>
+                <p className="label"><b>Ngày vào Cty</b> : 5721</p>
                 <p className="label"><b>Địa chỉ</b> : 5721</p>
 
             </div>
