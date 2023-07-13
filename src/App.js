@@ -16,6 +16,7 @@ import CreateFinanceIn from './pages/financeIn/CreateFinanceIn.page';
 import ListFinanceOut from './pages/financeout/FinanceOut.page';
 import CreateFinanceOut from './pages/financeout/CreateFinanceOut.page';
 import ProFile from './pages/user/ProFile.page';
+import CreateUser from './pages/user/CreateUser';
 import { LoginOutlined } from '@ant-design/icons';
 import LoginComponent from './component/Login.component';
 import { ToastContainer } from 'react-toastify';
@@ -84,11 +85,11 @@ const App = () => {
         <Content className='content'>
           <div className='content-content'>
             <Routes>
-              <Route path='/listfinancein' element={<ListFinanceIn />} />
-              <Route path='/createfinancein' element={<CreateFinanceIn />} />
-              <Route path='/listfinanceout' element={<ListFinanceOut />} />
-              <Route path='/createfinanceout' element={<CreateFinanceOut />} />
-              
+              <Route path='/list_income' element={<ListFinanceIn />} />
+              <Route path='/create_income' element={<CreateFinanceIn />} />
+              <Route path='/list_expense' element={<ListFinanceOut />} />
+              <Route path='/create_expense' element={<CreateFinanceOut />} />
+              <Route path='/create_user' element={<CreateUser />} />
             </Routes>
           </div>
 
