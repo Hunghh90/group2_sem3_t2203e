@@ -8,23 +8,23 @@ import { PlusOutlined } from '@ant-design/icons';
 import { NavLink } from 'react-router-dom';
 const columns = [
   {
-    title: 'Name',
+    title: 'Tiêu đề',
     dataIndex: 'name',
     key: 'name',
     render: (text) => <a>{text}</a>,
   },
   {
-    title: 'Age',
+    title: 'Loại khoản thu',
     dataIndex: 'age',
     key: 'age',
   },
   {
-    title: 'Address',
+    title: 'Só tiền (VNĐ)',
     dataIndex: 'address',
     key: 'address',
   },
   {
-    title: 'Tags',
+    title: 'Ngày',
     key: 'tags',
     dataIndex: 'tags',
     render: (_, { tags }) => (
@@ -44,12 +44,11 @@ const columns = [
     ),
   },
   {
-    title: 'Action',
+    title: 'Xem chi tiết',
     key: 'action',
     render: (_, record) => (
       <Space size="middle">
-        <a>Detail</a>
-        <a>Delete</a>
+        <a>Chi tiết</a>      
       </Space>
     ),
   },
@@ -81,13 +80,13 @@ const ListFinanceIn = () => {
   return (
     <>
       <div className='list-finance'>
-        Danh sách doanh thu
+        Danh sách khoản thu
       </div>
       <div>
         <Button type='primary' className='list-button'>
           <PlusOutlined />
           <NavLink to="/createfinancein">
-            New
+            Thêm mới
           </NavLink>
         </Button>
       </div>

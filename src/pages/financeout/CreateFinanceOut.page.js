@@ -1,13 +1,11 @@
 import { PlusOutlined } from '@ant-design/icons';
 import {
-    Button,
-    Cascader,
+    Button,    
     DatePicker,
     Form,
     Input,
     InputNumber,
-    Select,
-    TreeSelect,
+    Select,    
     Upload,
 } from 'antd';
 const { TextArea } = Input;
@@ -31,73 +29,39 @@ const CreateFinanceOut = () => {
 
                 
             >
-                <Form.Item label="Họ và tên">
-                    <Input />
-                </Form.Item>
                 <Form.Item label="Tiêu đề">
-                    <Input />
-                </Form.Item>
-                <Form.Item label="Loại khoản chi">
-                    <Select>
-                        <Select.Option value="demo">Demo</Select.Option>
-                    </Select>
-                </Form.Item>
-                <Form.Item label="TreeSelect">
-                    <TreeSelect
-                        treeData={[
-                            {
-                                title: 'Light',
-                                value: 'light',
-                                children: [
-                                    {
-                                        title: 'Bamboo',
-                                        value: 'bamboo',
-                                    },
-                                ],
-                            },
-                        ]}
-                    />
-                </Form.Item>
-                <Form.Item label="Cascader">
-                    <Cascader
-                        options={[
-                            {
-                                value: 'zhejiang',
-                                label: 'Zhejiang',
-                                children: [
-                                    {
-                                        value: 'hangzhou',
-                                        label: 'Hangzhou',
-                                    },
-                                ],
-                            },
-                        ]}
-                    />
-                </Form.Item>
-                <Form.Item label="Ngày - tháng">
-                    <DatePicker />
-                </Form.Item>
-                <Form.Item label="Số tiền">
-                    <InputNumber />
-                </Form.Item>
-                <Form.Item label="Mô tả chi tiết">
-                    <TextArea rows={4} />
-                </Form.Item>
-                <Form.Item label="Tải lên hóa đơn" valuePropName="fileList" getValueFromEvent={normFile}>
-                    <Upload action="/upload.do" listType="picture-card">
-                        <div>
-                            <PlusOutlined />
-                            <div
-                                style={{
-                                    marginTop: 8,
-                                }}
-                            >
-                                Upload
-                            </div>
-                        </div>
-                    </Upload>
-                </Form.Item>
-                <Button type='primary' style={{ marginLeft: "250px" }}>Button</Button>
+          <Input />
+        </Form.Item>
+        <Form.Item label="Loại khoản chi">
+          <Select>
+            <Select.Option value="demo">Demo</Select.Option>
+          </Select>
+        </Form.Item>        
+        <Form.Item label="Ngày - tháng">
+          <DatePicker />
+        </Form.Item>
+        <Form.Item label="Số tiền (VNĐ)">
+          <InputNumber />
+        </Form.Item>
+        <Form.Item label="Mô tả chi tiết">
+          <TextArea rows={4} />
+        </Form.Item>
+        <Form.Item label="Tải lên chứng từ" valuePropName="fileList" getValueFromEvent={normFile}>
+          <Upload action="/upload.do" listType="picture-card">
+            <div>
+              <PlusOutlined />
+              <div
+                style={{
+                  marginTop: 8,
+                }}
+              >
+                  Upload
+              </div>
+          </div>
+        </Upload>
+      </Form.Item>
+      <Button type='primary' style={{ marginLeft: "250px" }}>Lưu thay đổi</Button>
+
 
             </Form>
         </div>

@@ -17,7 +17,7 @@ function getItem(label, key, icon, children) {
     };
 }
 const items = [
-    getItem("Doanh Thu", 'sub1', <PieChartOutlined />, [
+    getItem("Khoản Thu", 'sub1', <PieChartOutlined />, [
         getItem(<NavLink to="/listfinancein">Danh sách</NavLink>, "1"),
         getItem(<NavLink to="/createfinancein">Thêm mới</NavLink>, "2")
     ]),
