@@ -58,7 +58,7 @@ const App = () => {
         <Header className='header'>
           <div className='logo'>
             <NavLink className="logo-nav-link" to="/">
-              Group2 T2203E
+              Accountant Pro
             </NavLink>
           </div>
           <div className='login'>
@@ -95,7 +95,7 @@ const App = () => {
 
         </Content>
         <Footer className='footer'>
-          Ant Design ©2023 Created by Ant UED
+          Group 2 T2203E
         </Footer>
       </Layout>
       <ToastContainer

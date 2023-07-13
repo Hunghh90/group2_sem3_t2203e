@@ -82,7 +82,7 @@ const CreateFinanceIn = () => {
         <Form.Item label="Mô tả chi tiết">
           <TextArea rows={4} />
         </Form.Item>
-        <Form.Item label="Tải lên hóa đơn" valuePropName="fileList" getValueFromEvent={normFile}>
+        <Form.Item label="Tải lên chứng từ" valuePropName="fileList" getValueFromEvent={normFile}>
           <Upload action="/upload.do" listType="picture-card">
             <div>
               <PlusOutlined />
