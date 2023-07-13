@@ -11,7 +11,7 @@ import {
       title: 'Tiêu đề',
       dataIndex: 'name',
       key: 'name',
-      render: (text) => <a>{text}</a>,
+      
     },
     {
       title: 'Loại khoản chi',
