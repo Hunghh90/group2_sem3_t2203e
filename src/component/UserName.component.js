@@ -1,7 +1,7 @@
 const UserNameComponent = () => {
     return (
         <div className="user-name">
-            <h3>Test</h3>
+            <h3>Test name</h3>
         </div>
         
     )

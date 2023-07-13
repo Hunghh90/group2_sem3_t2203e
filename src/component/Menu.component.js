@@ -25,7 +25,7 @@ const items = [
         getItem(<NavLink to="/list_expense">Danh sách</NavLink>, "3"),
         getItem(<NavLink to="/create_expense">Thêm mới</NavLink>, "4")
     ]),
-    getItem('Nhân viên', 'sub3', <DesktopOutlined />, [
+    getItem('Nhân viên', 'sub3', <TeamOutlined />, [
         getItem(<NavLink to="/list_user">Danh sách</NavLink>, "5"),
         getItem(<NavLink to="/create_user">Thêm mới</NavLink>, "6")
     ]),
