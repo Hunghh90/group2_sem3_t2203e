@@ -20,10 +20,10 @@ const CreatePayRoll = () => {
         <div>
             <Form className='form-input'
                 labelCol={{
-                    span: 4,
+                    span: 8,
                 }}
                 wrapperCol={{
-                    span: 14,
+                    span: 24,
                 }}
                 layout="horizontal"
 
@@ -32,6 +32,11 @@ const CreatePayRoll = () => {
         <Form.Item label="Tiêu đề">
           <Input />
         </Form.Item>
+        <Form.Item label="Nhân viên">
+          <Select>
+            <Select.Option value="demo">Demo</Select.Option>
+          </Select>
+        </Form.Item> 
         <Form.Item label="Số ngày công">
           <InputNumber />
         </Form.Item>
@@ -50,11 +55,7 @@ const CreatePayRoll = () => {
         <Form.Item label="Giảm trừ">
           <InputNumber />
         </Form.Item>
-        <Form.Item label="Nhân viên">
-          <Select>
-            <Select.Option value="demo">Demo</Select.Option>
-          </Select>
-        </Form.Item> 
+        
         <Form.Item label="Thưởng">
           <InputNumber />
         </Form.Item>

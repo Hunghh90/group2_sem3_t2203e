@@ -29,6 +29,11 @@ const CreateAdvance = () => {
 
                 
             >
+              <Form.Item label="Nhân viên">
+          <Select>
+            <Select.Option value="demo">Demo</Select.Option>
+          </Select>
+        </Form.Item>    
         <Form.Item label="Ngày ứng lương">
           <DatePicker />
         </Form.Item>
@@ -38,11 +43,7 @@ const CreateAdvance = () => {
         <Form.Item label="Mô tả chi tiết">
           <TextArea rows={4} />
         </Form.Item>
-        <Form.Item label="Nhân viên">
-          <Select>
-            <Select.Option value="demo">Demo</Select.Option>
-          </Select>
-        </Form.Item>        
+            
       <Button type='primary' style={{ marginLeft: "250px" }}>Lưu thay đổi</Button>
 
 

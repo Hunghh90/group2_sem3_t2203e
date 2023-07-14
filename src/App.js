@@ -16,8 +16,8 @@ import CreateFinanceIn from './pages/financeIn/CreateFinanceIn.page';
 import ListFinanceOut from './pages/financeout/FinanceOut.page';
 import CreateFinanceOut from './pages/financeout/CreateFinanceOut.page';
 import ProFile from './pages/user/ProFile.page';
-import CreateAdvance from './pages/user/CreateAdvance';
-import CreatePayRoll from './pages/user/CreatePayRoll';
+import CreateAdvance from './pages/CreateAdvance';
+import CreatePayRoll from './pages/CreatePayRoll';
 import { LoginOutlined } from '@ant-design/icons';
 import LoginComponent from './component/Login.component';
 import { ToastContainer } from 'react-toastify';
@@ -78,7 +78,9 @@ const App = () => {
               onCancel={() => setIsModalLogin(false)}
               footer={null}
             >
-              <LoginComponent />
+              <LoginComponent 
+              setIsModalLogin={setIsModalLogin}
+              />
             </Modal>
           </div>
           <SearchComponent />

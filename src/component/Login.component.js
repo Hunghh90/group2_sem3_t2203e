@@ -1,6 +1,7 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 
-const LoginComponent = () => {
+const LoginComponent = (props) => {
+    
     const onFinish = (values) => {
         if (!values.remember) {
             form.setFieldsValue({ username: "", password: "" });
@@ -11,6 +12,8 @@ const LoginComponent = () => {
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
     };
+    
+   
     const [form] = Form.useForm();
     return (
         <Form className="form-input"
@@ -71,7 +74,7 @@ const LoginComponent = () => {
                     span: 16,
                 }}
             >
-                <Button type="primary" htmlType="submit">
+                <Button type="primary" htmlType="submit" onClick={()=>props.setIsModalLogin(false)}>
                     Submit
                 </Button>
             </Form.Item>
