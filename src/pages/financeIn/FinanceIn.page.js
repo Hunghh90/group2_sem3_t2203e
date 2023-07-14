@@ -67,7 +67,7 @@ const ListFinanceIn = () => {
   return (
     <>
       <div className='list-finance'>
-        Danh sách khoản thu
+        Danh sách các khoản thu nhập
       </div>
       <div>
         <Button type='primary' className='list-button'>
