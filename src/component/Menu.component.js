@@ -27,9 +27,13 @@ const items = [
     ]),
     getItem('Nhân viên', 'sub3', <TeamOutlined />, [
         getItem(<NavLink to="/list_user">Danh sách</NavLink>, "5"),       
-        getItem(<NavLink to="/advance_payment">Tạm ứng lương</NavLink>, "6"),
-        getItem(<NavLink to="/create_payroll">Tính lương nhân viên</NavLink>, "7")
     ]),
+    getItem("Lương", "sub4",<TeamOutlined />, [
+        getItem(<NavLink to="/list_advance">Danh sách tạm ứng</NavLink>, "6"),
+        getItem(<NavLink to="/create_advance">Tạm ứng lương</NavLink>, "7"),
+        getItem(<NavLink to="/create_payroll">Tính lương nhân viên</NavLink>, "8")
+
+    ])
 ];
 const MenuComponent = () => {
 
