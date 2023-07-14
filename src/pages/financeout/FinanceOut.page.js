@@ -9,39 +9,38 @@ import {
   const columns = [
     {
       title: 'Tiêu đề',
-      dataIndex: 'name',
-      key: 'name',
-      
-    },
-    {
-      title: 'Loại khoản chi',
-      dataIndex: 'age',
-      key: 'age',
-    },
-    {
-      title: 'Só tiền (VNĐ)',
-      dataIndex: 'address',
-      key: 'address',
+      dataIndex: 'Name',
+      key: 'Name',      
     },
     {
       title: 'Ngày',
+      dataIndex: 'Date',
+      key: 'Date',
+    },
+    {
+      title: 'Loại khoản chi',
+      dataIndex: 'TypefinanceoutId',
+      key: 'TypefinanceoutId',
+    },
+    {
+      title: 'Só tiền (VNĐ)',
+      dataIndex: 'Amount',
+      key: 'Amount',
+    },
+    {
+      title: 'Ngày tạo',
       key: 'tags',
-      dataIndex: 'tags',
-      render: (_, { tags }) => (
-        <>
-          {tags.map((tag) => {
-            let color = tag.length > 5 ? 'geekblue' : 'green';
-            if (tag === 'loser') {
-              color = 'volcano';
-            }
-            return (
-              <Tag color={color} key={tag}>
-                {tag.toUpperCase()}
-              </Tag>
-            );
-          })}
-        </>
-      ),
+      dataIndex: 'tags',     
+    },
+    {
+      title: 'Người tạo',
+      key: '',
+      dataIndex: '',     
+    },
+    {
+      title: 'Trạng thái',
+      key: 'Status',
+      dataIndex: 'Status',     
     },
     {
       title: 'Xem chi tiết',
@@ -56,25 +55,14 @@ import {
   const data = [
     {
       key: '1',
-      name: 'John Brown',
-      age: 32,
-      address: 'New York No. 1 Lake Park',
+      Name: 'Sửa cơ sở vật chất',
+      Date: '2023/03/03',
+      TypefinanceoutId : 'Chi cần thiết',
+      Amount : '3000',      
       tags: ['nice', 'developer'],
+      Status: '1'
     },
-    {
-      key: '2',
-      name: 'Jim Green',
-      age: 42,
-      address: 'London No. 1 Lake Park',
-      tags: ['loser'],
-    },
-    {
-      key: '3',
-      name: 'Joe Black',
-      age: 32,
-      address: 'Sydney No. 1 Lake Park',
-      tags: ['cool', 'teacher'],
-    },
+    
   ];
   const ListFinanceIn = () => {
     return (

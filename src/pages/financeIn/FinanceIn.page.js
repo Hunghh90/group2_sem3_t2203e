@@ -9,39 +9,38 @@ import { NavLink } from 'react-router-dom';
 const columns = [
   {
     title: 'Tiêu đề',
-    dataIndex: 'name',
-    key: 'name',
-    
+    dataIndex: 'Name',
+    key: 'Name',      
   },
   {
-    title: 'Loại khoản thu',
-    dataIndex: 'age',
-    key: 'age',
+    title: 'Ngày',
+    dataIndex: 'Date',
+    key: 'Date',
+  },
+  {
+    title: 'Loại thu nhập',
+    dataIndex: 'TypefinanceinId',
+    key: 'TypefinanceinId',
   },
   {
     title: 'Só tiền (VNĐ)',
-    dataIndex: 'address',
-    key: 'address',
+    dataIndex: 'Amount',
+    key: 'Amount',
   },
   {
     title: 'Ngày',
     key: 'tags',
-    dataIndex: 'tags',
-    render: (_, { tags }) => (
-      <>
-        {tags.map((tag) => {
-          let color = tag.length > 5 ? 'geekblue' : 'green';
-          if (tag === 'loser') {
-            color = 'volcano';
-          }
-          return (
-            <Tag color={color} key={tag}>
-              {tag.toUpperCase()}
-            </Tag>
-          );
-        })}
-      </>
-    ),
+    dataIndex: 'tags',     
+  },
+  {
+    title: 'Người tạo',
+    key: 'tags',
+    dataIndex: 'tags',     
+  },
+  {
+    title: 'Trạng thái',
+    key: 'Status',
+    dataIndex: 'Status',     
   },
   {
     title: 'Xem chi tiết',
@@ -56,24 +55,12 @@ const columns = [
 const data = [
   {
     key: '1',
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
+    Name: 'Bán hàng tháng 02/2023',
+    Date: '2023/03/03',
+    TypefinanceoutId : 'Chi cần thiết',
+    Amount : '4000',      
     tags: ['nice', 'developer'],
-  },
-  {
-    key: '2',
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-    tags: ['loser'],
-  },
-  {
-    key: '3',
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sydney No. 1 Lake Park',
-    tags: ['cool', 'teacher'],
+    Status: '1'
   },
 ];
 const ListFinanceIn = () => {

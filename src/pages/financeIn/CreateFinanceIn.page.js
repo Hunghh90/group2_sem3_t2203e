@@ -31,16 +31,8 @@ const CreateFinanceIn = () => {
         <Form.Item label="Tiêu đề">
           <Input />
         </Form.Item>
-        <Form.Item label="Loại khoản thu">
-          <Select>
-            <Select.Option value="demo">Demo</Select.Option>
-          </Select>
-        </Form.Item>        
         <Form.Item label="Ngày - tháng">
           <DatePicker />
-        </Form.Item>
-        <Form.Item label="Số tiền (VNĐ)">
-          <InputNumber />
         </Form.Item>
         <Form.Item label="Mô tả chi tiết">
           <TextArea rows={4} />
@@ -59,6 +51,14 @@ const CreateFinanceIn = () => {
           </div>
         </Upload>
       </Form.Item>
+        <Form.Item label="Loại khoản thu">
+          <Select>
+            <Select.Option value="demo">Demo</Select.Option>
+          </Select>
+        </Form.Item>        
+        <Form.Item label="Số tiền (VNĐ)">
+          <InputNumber />
+        </Form.Item>             
       <Button type='primary' style={{ marginLeft: "250px" }}>Lưu thay đổi</Button>
 
     </Form>

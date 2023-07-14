@@ -15,7 +15,7 @@ const normFile = (e) => {
     }
     return e?.fileList;
 };
-const CreateFinanceOut = () => {
+const CreateAdvance = () => {
     return (
         <div>
             <Form className='form-input'
@@ -29,37 +29,20 @@ const CreateFinanceOut = () => {
 
                 
             >
-        <Form.Item label="Tiêu đề">
-          <Input />
-        </Form.Item>
-        <Form.Item label="Ngày - tháng">
+        <Form.Item label="Ngày ứng lương">
           <DatePicker />
+        </Form.Item>
+        <Form.Item label="Số tiền (VNĐ)">
+          <InputNumber />
         </Form.Item>
         <Form.Item label="Mô tả chi tiết">
           <TextArea rows={4} />
         </Form.Item>
-        <Form.Item label="Tải lên chứng từ" valuePropName="fileList" getValueFromEvent={normFile}>
-          <Upload action="/upload.do" listType="picture-card">
-            <div>
-              <PlusOutlined />
-              <div
-                style={{
-                  marginTop: 8,
-                }}
-              >
-                  Upload
-              </div>
-          </div>
-        </Upload>
-      </Form.Item>
-        <Form.Item label="Loại khoản chi">
+        <Form.Item label="Nhân viên">
           <Select>
             <Select.Option value="demo">Demo</Select.Option>
           </Select>
         </Form.Item>        
-        <Form.Item label="Số tiền (VNĐ)">
-          <InputNumber />
-        </Form.Item>
       <Button type='primary' style={{ marginLeft: "250px" }}>Lưu thay đổi</Button>
 
 
@@ -67,4 +50,4 @@ const CreateFinanceOut = () => {
         </div>
     );
 };
-export default CreateFinanceOut;
+export default CreateAdvance;
